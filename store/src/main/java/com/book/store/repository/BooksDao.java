@@ -5,6 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface BooksDao extends JpaRepository<Book, Integer> {
-    List<Book> findByAuthor(String author);
-    Optional<Book> findByIsbn(String isbn);
+    List<Books> findByAuthor(String author);
+    Optional<Books> findByIsbn(String isbn);
 }

@@ -10,7 +10,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "td_user_map")
-public class User { // Renamed from Users to User for convention
+public class Users { // Renamed from Users to User for convention
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
