@@ -10,15 +10,16 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "orders")
 @Data
-@NoAArgsConstructor
-public class Orders {
+@NoArgsConstructor
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id", nullable = false)
-    private Integer userId;
+    @ManyToOne 
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(name="order_date", nullable = false,updatable = false)
     private LocalDateTime orderDate;
