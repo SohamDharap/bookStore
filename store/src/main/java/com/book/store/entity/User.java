@@ -35,6 +35,12 @@ public class User { // Renamed from Users to User for convention
     @Column(name = "status", nullable = false, length = 50)
     private String status = "ACTIVE"; // Added status with a default value
 
+    @Column(name = "otp")
+    private String otp;
+
+    @Column(name = "otp_expiry")
+    private LocalDateTime otpExpiry;
+
     @CreationTimestamp
     @Column(name = "creation_date", updatable = false)
     private LocalDateTime creationDate; // Added creation timestamp

@@ -15,4 +15,5 @@ public class AddBookRequest {
     private String author;
     private String isbn;
     private BigDecimal price;
+    private Integer StockQuantity;
 }

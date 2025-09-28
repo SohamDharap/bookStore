@@ -1,18 +1,21 @@
 package com.book.store.service;
 
-import org.springframework.stereotype.Service;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import com.book.store.entity.Book;
-import com.book.store.beans.AddBookRequest;
+import java.util.List;
+import java.util.Optional; // Add this import
 
-import java.util.*;
-import java.util.concurrent.atomic.AtomicLong;
-
+// This is the corrected contract for your service
 public interface ActionService {
-    Book addBook(AddBookRequest request);
-    Book getBookById(Integer id);
-    Book updateBook(Integer id, Book updatedBook);
-    boolean deleteBook(Integer id);
+
+    Book addBook(Book book);
+
+    // Return Optional<Book> to gracefully handle cases where the book is not found
+    Optional<Book> getBookById(Integer id);
+
     List<Book> getAllBooks();
+
+    Book updateBook(Integer id, Book bookDetails);
+
+    // The delete method in the repository returns void, so this should too
+    void deleteBook(Integer id);
 }

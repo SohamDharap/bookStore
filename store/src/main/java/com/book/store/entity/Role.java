@@ -6,12 +6,16 @@ import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "td_roles")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Role {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "role_name")
     private String roleName;
 }

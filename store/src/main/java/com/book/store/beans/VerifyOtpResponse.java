@@ -1,2 +1,14 @@
-package com.book.store.beans;public class VerifyOtpResponse {
+package com.book.store.beans;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class VerifyOtpResponse {
+    private String token;
 }
